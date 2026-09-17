@@ -36,7 +36,7 @@ static const char *template_mach_toml = "[project]\n"
                                         "\n"
                                         "[deps.mach-std]\n"
                                         "type    = \"remote\"\n"
-                                        "path    = \"https://github.com/octalide/mach-std\"\n"
+                                        "path    = \"https://github.com/briar-systems/mach-std\"\n"
                                         "version = \"branch/dev\"\n";
 
 void cmd_init_help(FILE *stream)
@@ -171,7 +171,7 @@ int cmd_init_handle(int argc, char **argv)
     // initialize mach-std dependency
     printf("initializing mach-std dependency...\n");
     const char *mach_std_path = "dep/mach-std";
-    const char *mach_std_url  = "https://github.com/octalide/mach-std";
+    const char *mach_std_url  = "https://github.com/briar-systems/mach-std";
 
     if (!git_submodule_init(mach_std_path, mach_std_url))
     {
